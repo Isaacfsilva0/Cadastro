@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de alunos</title>
+    <link rel="stylesheet" href="./cadastro.css">
+
+</head>
+<body>
+
+    <div id="menu">
+    
+        <h1>Site de Cadastro</h1>
+
+    </div>
+
+    
+    <br>
+
+    <div id="caixatxt">
+
+        <h3>Cadastro de alunos !</h3>
+        
+
+        
+    </div>
+    
+    <br><br>
+    
+    <form>
+
+        <table>
+            
+            <tr>
+            
+                <th>Nome:</th>
+                <td> <input type="text" id="nomeAluno" placeholder="Digite o Primeiro nome"> </td>
+
+            </tr>
+         
+
+            <tr>
+                
+                <th>Sobrenome:</th>
+                <td> <input type="text" id="sobrenomeAluno" placeholder="Digite o Segundo nome"> </td>
+
+            </tr>
+
+
+            <tr>
+                
+                <th>Idade:</th>
+                <td> <input type="number" id="idadeAluno" placeholder="Digite sua idade"> </td>
+
+            </tr>
+
+
+            <tr>
+            
+                <th>e-mail:</th>
+                <td> <input type="email" id="emailAluno" placeholder="Digite seu email"> </td>
+
+            </tr>
+
+
+            <tr>
+            
+                <td> <input onclick="mostrarInformacoes()" type="submit" value="Cadastrar" id="botaocad"/> </td>
+
+            </tr>
+        </table>
+
+
+    </form>
+
+<script type="text/javascript">
+    
+    function mostrarInformacoes(){
+
+var aluno1 ={} 
+
+var aluno2 ={} 
+
+var aluno3 ={} 
+
+var aluno4 ={} 
+
+
+var nome = document.getElementById("nomeAluno").value;
+
+var sobrenome = document.getElementById("sobrenomeAluno").value;
+
+var idade = document.getElementById("idadeAluno").value;
+
+var email = document.getElementById("emailAluno").value;
+
+      if(nome.length <=2)
+        alert("Nome Inválido !");
+            else{
+                if(sobrenome.length <= 1)
+                    alert("Sobrenome Inválido !");
+                        else{
+                            if(idade <= 14)
+                                alert("O Aluno não tem idade o suficiente para realizar o cadastro.");
+                                    else{
+                                        if(email.length < 10)
+                                            alert("O e-mail informado é inválido");
+                                                else{
+                                                    alert('Cadastro finalizado !\nNome: '+nome +'\nSobrenome: '+sobrenome +'\nIdade: '+idade +'\nE-mail: '+email);
+                                                
+                                                }
+
+                                    }
+
+                        }
+            }
+    }
+    
+</script>
+
+    
+
+</body>
+</html>
